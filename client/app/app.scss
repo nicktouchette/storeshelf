@@ -1,5 +1,8 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+$visual-grid: true !default;
+@import '../bower_components/neat/app/assets/stylesheets/neat';
 
 /**
  * App-wide Styles
@@ -10,6 +13,28 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+body {
+  font-family: BebasNeueRegular;
+  margin: 0px;
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+span.icon {
+  font-family: IcoMoon-Free;
+  font-size: 2.5em;
+  color: white;
+  text-decoration: none;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -24,5 +49,6 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'admin/admin';
 @import 'main/main';
 @import '../components/footer/footer';
+@import '../components/navbar/navbar';
 @import '../components/oauth-buttons/oauth-buttons';
 // endinjector
