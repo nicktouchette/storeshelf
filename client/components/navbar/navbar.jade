@@ -15,7 +15,7 @@ header.navigation(role='banner' ng-controller='NavbarController')
       //- Search
       a.nav-icon(href="#")
         span.icon 
-      ul.navigation-menu(ng-class='{"show": !nav.isCollapsed}')
+      ul.navigation-menu(ng-show='!nav.isCollapsed')
         li.nav-link
           a(href='javascript:void(0)') Checkout
         li.nav-link

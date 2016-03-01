@@ -53,15 +53,20 @@ header.navigation {
 
   ul.navigation-menu {
     clear: both;
-    display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
     width: 100%;
     z-index: 9999;
+    height: 200px;
 
-    &.show {
-      display: block;
+    &.ng-hide {
+      height: 0px;
+      opacity: 0;
+    }
+
+    &.ng-hide-add, &.ng-hide-remove {
+      transition: all linear 0.5s;
     }
 
   }
@@ -104,44 +109,3 @@ header.navigation {
     height: $navigation-height;
   }
 }
-
-// .navbar {
-//   @include outer-container(100%);
-
-//   .navbar-toggle {
-//     @include span-columns(1);
-//     @include shift(11);
-//   }
-//   .navbar-header {
-//     @include span-columns(12);
-//   }
-//   /* Rectangle 1: */
-//   background-color: #000;
-//   // /* Hamburger: */
-//   // font-family: IcoMoon-Free;
-//   // font-size: 28px;
-//   // color: #FFFFFF;
-//   // line-height: 28px;
-//   // /* Search: */
-//   // font-family: IcoMoon-Free;
-//   // font-size: 26px;
-//   // color: #FFFFFF;
-//   // line-height: 26px;
-//   // /* Back: */
-//   // font-family: IcoMoon-Free;
-//   // font-size: 36px;
-//   // color: #FFFFFF;
-//   // line-height: 36px;
-//   // /* Cart: */
-//   // font-family: IcoMoon-Free;
-//   // font-size: 26px;
-//   // color: #FFFFFF;
-//   // line-height: 26px;
-//   // /* Rectangle 21: */
-//   // background: #FFF8E7;
-//   // /* LOGO: */
-//   font-family: BebasNeueRegular;
-//   font-size: 48px;
-//   color: #000000;
-//   line-height: 58px;
-// }
