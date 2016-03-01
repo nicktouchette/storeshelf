@@ -467,7 +467,7 @@ gulp.task('build:client', ['transpile:client', 'styles', 'html', 'constant'], ()
     var assetsFilter = plugins.filter('**/*.{js,css}');
 
     return gulp.src(paths.client.mainView)
-        .pipe(plugins.jade({pretty: true}))
+        // .pipe(plugins.jade({pretty: true}))
         .pipe(plugins.useref())
             .pipe(appFilter)
                 .pipe(plugins.addSrc.append('.tmp/templates.js'))
@@ -488,6 +488,7 @@ gulp.task('build:client', ['transpile:client', 'styles', 'html', 'constant'], ()
             .pipe(htmlBlock.restore())
         .pipe(plugins.revReplace({manifest}))
         .pipe(assetsFilter)
+        .pipe(assetsFilter.restore())
         .pipe(gulp.dest(`${paths.dist}/${clientPath}`));
 });
 
