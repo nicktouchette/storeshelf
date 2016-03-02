@@ -9,15 +9,25 @@ $visual-grid: true !default;
  */
 
 @font-face {
-    font-family: 'bebasregular';
-    src: url('./assets/fonts/BEBAS___-webfont.eot');
-    src: url('./assets/fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./assets/fonts/BEBAS___-webfont.woff') format('woff'),
-         url('./assets/fonts/BEBAS___-webfont.ttf') format('truetype'),
-         url('./assets/fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-family: 'BebasNeueRegular';
+    src: url('./assets/fonts/bebasneue_regular-webfont.eot');
+    src: url('./assets/fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/bebasneue_regular-webfont.woff') format('woff'),
+         url('./assets/fonts/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('./assets/fonts/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('./assets/fonts/bebasneue_regular-webfont.eot');
+    src: url('./assets/fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/bebasneue_regular-webfont.woff') format('woff'),
+         url('./assets/fonts/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('./assets/fonts/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
 .browserupgrade {
