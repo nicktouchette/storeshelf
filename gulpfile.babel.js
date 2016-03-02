@@ -443,6 +443,7 @@ gulp.task('build', cb => {
         'clean:dist',
         'clean:tmp',
         'inject',
+        'jade',
         'wiredep:client',
         [
             'build:images',
