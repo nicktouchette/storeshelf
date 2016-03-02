@@ -136,20 +136,41 @@ section {
   }
 }
 
-.addCart {
+button {
   font-family: BebasNeueBold;
   color: white;
-  background: #3687D2;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  font-size: 20px;
-  padding-top: 8px;
-  text-align: center;
   outline: none;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  background: #3687D2;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  padding-top: 5px;
+
+  &.addCart {
+    text-align: center;
+  }
+
+  &.warning {
+    background: #D23636;
+  }
+
+  &.small {
+    width: 40px;
+  }
 }
 
 input {
   background-color: white;
   border: 2px solid #979797;
   font-size: 20px;
+}
+
+select {
+  font-family: BebasNeueBold;
+  font-size: 20px;
+  background-color: white;
+  border: 2px solid #979797;
+  width: 100%;
 }
