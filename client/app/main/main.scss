@@ -2,19 +2,20 @@ section {
   $panel-color: #FDFEE8;
   $panel-color-medium: shade($panel-color, 16%);
   $panel-color-dark: shade($panel-color, 25%);
+  $panel-color-table: shade($panel-color, 20%);
 
   display: block;
 
   header {
     position:relative;
     background-color: $panel-color-dark;
-    height: 2.7em;
+    height: 2em;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
 
     h1 {
       font-family: BebasNeueBold;
       line-height: .85em;
-      font-size: 4em;
+      font-size: 3em;
       margin: 0px 10px;
     }
   }
@@ -30,6 +31,11 @@ section {
     &:last-child {
       padding-bottom: 15px;
     }
+
+    input {
+      width: 100%;
+    }
+
     ul.products {
       @include outer-container;
 
@@ -116,6 +122,16 @@ section {
       p {
         margin: 0px;
       }
+
+      table {
+        width: 100%;
+        background-color: $panel-color-table;
+
+        tr:first-child {
+          text-align: left;
+          background-color: $panel-color-dark;
+        }
+      }
     }
   }
 }
@@ -130,4 +146,10 @@ section {
   padding-top: 8px;
   text-align: center;
   outline: none;
+}
+
+input {
+  background-color: white;
+  border: 2px solid #979797;
+  font-size: 20px;
 }

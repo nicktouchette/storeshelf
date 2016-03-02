@@ -50,8 +50,10 @@ section
   div.panel
     article
       p Email
+        input(type="email" placeholder="Enter Email")
       p Password
-      p Login
+        input(type="password" placeholder="Enter Password")
+      button Login
       p Forgot Password?
 section
   header
@@ -59,8 +61,12 @@ section
   div.panel
     article
       p New Email
+        input(type="email" placeholder="New Email")
       p New Password
+        input(type="password" placeholder="New Password")
       p Confirm Password
+        input(type="password" placeholder="Confirm Password")
+      button Register
 section
   header
     h1 Checkout
@@ -70,11 +76,17 @@ section
       h2 Shipping Address
     article
       p Email Address
+        input(type="text" placeholder="Enter Email")
       p Recipient Name
+        input(type="text" placeholder="Recipient Name")
       p Street Address
+        input(type="text" placeholder="Street Address")
       p Zipcode
+        input(type="text" placeholder="Zipcode")
       p City
+        input(type="text" placeholder="City")
       p State
+        input(type="text" placeholder="State")
   div.panel
     article.header
       img(src='assets/images/step2.png')
@@ -86,9 +98,12 @@ section
       h2 Payment Information
     article
       p Card Number
+        input(type="text" placeholder="Enter Card Number")
       p Expiration
+        input(type="text" placeholder="Expiration")
       p CVC
-      p --- preview card ---
+        input(type="text" placeholder="CVC")
+      img(src="http://www.fillmurray.com/300/150")
   div.panel
     article.header
       img(src='assets/images/step4.png')
@@ -165,7 +180,7 @@ section
   header
     h1 Search
   div.panel
-    input(type="text")
+    input(type="text" placeholder="Find a Product")
     article
       ul
         li All
@@ -204,10 +219,86 @@ section
 section
   header
     h1 Add Product
+  div.panel
+    ul.products
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p New Item
+          button.addCart Add to cart
+    article
+      p Name
+        input(type="text" placeholder="Name")
+      p Category
+        input(type="text" placeholder="Category")
+      p Base Price
+        input(type="text" placeholder="Base Price")
+      p Image
+        input(type="text" placeholder="Image")
+      p SKU #
+        input(type="text" placeholder="SKU #")
+    article
+      p Description
+        input(type="text")
+  div.panel
+    article.header
+      h2 Custom Attributes
+    article
+      p Attribute Name
+        input(type="text" placeholder="Attribute Name")
+      table
+        tr
+          th -
+          th Value
+          th +Price
+          th Image
+          th SKU
+        tr
+          td
+            button DEL
+          td
+            input(type="text" placeholder="Value")
+          td
+            input(type="text" placeholder="+Price")
+          td
+            input(type="text" placeholder="Image")
+          td
+            input(type="text" placeholder="SKU")
+      button Update
+
+      table
+        tr
+          th -
+          th Name
+          th Preview
+        tr
+          td
+            button DEL
+          td
+            Name
+          td
+            select(name="dropdown")
+              option(value="option1") Option 1
+              option(value="option2") Option 2
+              option(value="option2") Option 3
+
 section
   header
     h1 Store Settings
-
+  div.panel
+    ul
+      li category nesting
+      li stripe user setup
+        li secret key
+      li Homepage settings
+        li Welcome Customization
+        li Carousel slots
+        li Special Items
+      li Color Themes
+      li Store attributes
+        li store name
+        li header information/logo
+        li order processing policy
 
 
 
