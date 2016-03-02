@@ -443,7 +443,6 @@ gulp.task('build', cb => {
         'clean:dist',
         'clean:tmp',
         'inject',
-        'jade',
         'wiredep:client',
         [
             'build:images',
@@ -458,7 +457,7 @@ gulp.task('build', cb => {
 
 gulp.task('clean:dist', () => del([`${paths.dist}/!(.git*|.openshift|Procfile)**`], {dot: true}));
 
-gulp.task('build:client', ['transpile:client', 'styles', 'jade', 'html', 'constant'], () => {
+gulp.task('build:client', ['transpile:client', 'styles', 'jade:dist', 'html', 'constant'], () => {
     var manifest = gulp.src(`${paths.dist}/${clientPath}/assets/rev-manifest.json`);
 
     var appFilter = plugins.filter('**/app.js');
@@ -500,13 +499,20 @@ gulp.task('html', function() {
         }))
         .pipe(gulp.dest('.tmp'));
 });
+
 gulp.task('jade', function() {
-  return gulp.src(paths.client.views)
-    .pipe(plugins.jade())
-    .pipe(plugins.angularTemplatecache({
+    return gulp.src(paths.client.views)
+        .pipe(plugins.jade())
+        .pipe(gulp.dest('.tmp'));
+});
+
+gulp.task('jade:dist', function() {
+    return gulp.src(paths.client.views)
+        .pipe(plugins.jade())
+        .pipe(plugins.angularTemplatecache({
             module: 'storeshelfApp'
         }))
-    .pipe(gulp.dest('.tmp'));
+        .pipe(gulp.dest('.tmp'));
 });
 
 gulp.task('constant', function() {
