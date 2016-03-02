@@ -103,14 +103,14 @@ section
       h2 Thank you for your purchase
     article
       p order transaction #123456789 was successful
-      p your order will be processed <order processing rule>
+      p your order will be processed .order processing rule.
       p An email will be sent and will update your account when the order has been processed/shipped.
       p show receipt
 section
   header
     h1 Dashboard
   div.panel
-    ul
+    ul.dashboard
       li
         a(href="") Order History
       li
@@ -130,35 +130,77 @@ section
       h2 Order History
     article
       p Things go here
+  div.panel
     article.header
       h2 User Settings
     article
       p Things go here
+  div.panel
     article.header
       h2 Manage Orders
     article
       p Things go here
+  div.panel
     article.header
       h2 Manage Products
     article
       p Things go here
+  div.panel
     article.header
       h2 Sales Information
     article
       p Things go here
+  div.panel
     article.header
       h2 Manage Users
     article
       p Things go here
+  div.panel
     article.header
       h2 Store Settings
     article
       p Things go here
 
-
 section
   header
     h1 Search
+  div.panel
+    input(type="text")
+    article
+      ul
+        li All
+        li Category
+          li Sub Category
+          li Sub Category
+        li Category
+          li Sub Category
+    p Displaying Items From .Category.
+    ul.products
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p Normal Item
+          button.addCart Add to cart
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p Normal Item
+          button.addCart Add to cart
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p Normal Item
+          button.addCart Add to cart
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p Normal Item
+          button.addCart Add to cart
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p Normal Item
+          button.addCart Add to cart
 section
   header
     h1 Add Product
