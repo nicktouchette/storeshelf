@@ -21,7 +21,10 @@ $visual-grid: true !default;
 
 @font-face {
   font-family: 'BebasNeueBold';
-  src: url('BebasNeueBold.eot?#iefix') format('embedded-opentype'),  url('BebasNeueBold.woff') format('woff'), url('BebasNeueBold.ttf')  format('truetype'), url('BebasNeueBold.svg#BebasNeueBold') format('svg');
+  src: url('../assets/fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/BebasNeueBold.woff') format('woff'),
+       url('../assets/fonts/BebasNeueBold.ttf')  format('truetype'),
+       url('../assets/fonts/BebasNeueBold.svg#BebasNeueBold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
