@@ -2,30 +2,38 @@ section.detail
   header
     h1 Product Detail
   div.panel
-    p Home > Category > Sub Category > #####-##
+    p {{vm.product.name}}
 
     img(src="{{vm.product.image}}")
 
     article
       table
         tr
-          td Name
-          td {{vm.product.name}}
+          td SKU
+          td {{vm.product.sku}}
         tr
           td Category
           td {{vm.product.category}}
         tr
           td Quantity
-          td {{vm.product.quantity}}
-        tr
-          td Custom 1
-          td Custom 1 Field
+          td
+            .quantitybutton
+              button.decrease
+                span.icon-minus
+              input(type='number' value="1")
+              button.increase
+                span.icon-plus
+        tr(ng-repeat="customattribute in vm.product.attribute")
+          td {{customattribute.name}}
+          td
+            select(name="dropdown")
+              option(value="{{attributevalues.value}}" ng-repeat="attributevalues in customattribute.values") {{attributevalues.value}}
 
     article.footer
       ul
         li Price
         li {{vm.product.price}}
-      button.addCart Add to Cart
+      button.addCart(ng-click="vm.addCart()") Add to Cart
       //- button.warning Remove from Cart
       //- button.checkout Checkout?
 

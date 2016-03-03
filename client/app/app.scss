@@ -192,21 +192,6 @@ button {
   &.small {
     width: 40px;
   }
-
-  &.decrease, &.increase {
-    $background-color: #D8D8D8;
-    @include highlighting($background-color);
-    background: $background-color;
-    width: 30px;
-    height: 30px;
-    border-radius: 0px;
-    border: 2px solid #979797;
-    font-size: .25em;
-
-    span {
-      color: #979797;
-    }
-  }
 }
 
 .help-block {
@@ -218,6 +203,42 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+  }
+}
+
+.quantitybutton {
+  float: right;
+  height: 30px;
+  font-size: 25px;
+
+  button, input {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+  }
+  input[type='number'] {
+    text-align: center;
+    margin: 0px 2px;
+    padding: 0px;
+    width: 40px;
+    height: 30px;
+  }
+
+  button {
+    &.decrease, &.increase {
+      $background-color: #D8D8D8;
+      @include highlighting($background-color);
+      background: $background-color;
+      width: 30px;
+      height: 30px;
+      border-radius: 0px;
+      border: 2px solid #979797;
+      font-size: .25em;
+
+      span {
+        color: #979797;
+      }
+    }
   }
 }
 

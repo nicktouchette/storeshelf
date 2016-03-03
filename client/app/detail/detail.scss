@@ -27,4 +27,8 @@
     @include span-columns(12 of 12);
     margin-top: 10px;
   }
+
+  .quantitybutton {
+    float: left;
+  }
 }

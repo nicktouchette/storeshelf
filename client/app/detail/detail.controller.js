@@ -12,7 +12,6 @@ class DetailCtrl {
 
     $http.get('/api/products/' + id).then(response => {
       vm.product = response.data;
-      console.log(vm.product);
     });
   }
 }

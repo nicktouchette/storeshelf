@@ -64,9 +64,12 @@ section {
           margin: 0px;
           padding-top: 5px;
           background-color: $panel-color-dark;
+          text-align: center;
+        }
+
+        p.last {
           border-radius: 0px 0px 5px 5px;
           border-bottom: $border;
-          text-align: center;
 
           button {
             margin: 2px;
@@ -182,24 +185,6 @@ input {
 
   &:hover {
     background-color: white;
-  }
-}
-
-.quantitybutton {
-  float: right;
-  height: 30px;
-
-  button, input {
-    float: left;
-    margin: 0px;
-    padding: 0px;
-  }
-  input[type='number'] {
-    text-align: center;
-    margin: 0px 2px;
-    padding: 0px;
-    width: 40px;
-    height: 30px;
   }
 }
 
