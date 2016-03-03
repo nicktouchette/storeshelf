@@ -13,26 +13,30 @@ section
     img(src="http://www.fillmurray.com/150/250")
 
     article
-      ul.fields
-        li Name
-        li Category
-        li Quantity
-        li Custom 1
-      ul.values
-        li Name Field
-        li Category Field
-        li Quantity Field
-        li Custom 1 Field
+      table
+        tr
+          td Name
+          td Name Field
+        tr
+          td Category
+          td Category Field
+        tr
+          td Quantity
+          td Quantity Field
+        tr
+          td Custom 1
+          td Custom 1 Field
 
     article.footer
       ul
         li Price
         li $999.99
-      button Add to cart
+      button.warning Remove from Cart
+      button.checkout Checkout?
 
     article
       p Description
-section
+section.cart
   header
     h1 Cart
   div.panel
@@ -53,12 +57,12 @@ section
             button.decrease -
             input(type='number' value="1")
             button.increase +
-
     br
     article.footer
-      p Total Price
-      p $2009.98 + shipping
-      p Checkout
+      h2 Total Price
+      p $2009.98
+        span + shipping
+      button.checkout Checkout
 section
   header
     h1 Login
