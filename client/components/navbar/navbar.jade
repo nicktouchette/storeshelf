@@ -4,16 +4,16 @@ header.navigation(role='banner' ng-controller='NavbarController')
       img(src="http://www.fillmurray.com/500/200", alt='Logo Image')
     nav(role='navigation')
       //- House
-      a.nav-icon(ui-sref='main')
+      a.nav-icon(ui-sref='main' ng-click="nav.isCollapsed = true")
         span.icon-home3
       //- Hamburger
       a.nav-icon(href="#" ng-click="nav.isCollapsed = !nav.isCollapsed")
         span(ng-class='{"icon-menu3": nav.isCollapsed, "icon-menu4": !nav.isCollapsed}')
       //- Shopping Cart
-      a.nav-icon(ui-sref='cart')
+      a.nav-icon(ui-sref='cart' ng-click="nav.isCollapsed = true")
         span.icon-cart
       //- Search
-      a.nav-icon(ui-sref='search')
+      a.nav-icon(ui-sref='search' ng-click="nav.isCollapsed = true")
         span.icon-search
       ul.navigation-menu(ng-show='!nav.isCollapsed' ng-click="nav.isCollapsed = true")
         li.nav-link
@@ -24,13 +24,13 @@ header.navigation(role='banner' ng-controller='NavbarController')
           a(ui-sref='search') Find Products
         li.nav-link
           a(ui-sref='dashboard') Account Settings
-        li.nav-link(ng-show='nav.isAdmin()', ui-sref-active='active')
+        li.nav-link(ng-show='nav.isAdmin()')
           a(ui-sref='admin') Admin Dashboard
-        li.nav-link(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
+        li.nav-link(ng-hide='nav.isLoggedIn()')
           a(ui-sref='signup') Sign up
-        li.nav-link(ng-hide='nav.isLoggedIn()', ui-sref-active='active')
+        li.nav-link(ng-hide='nav.isLoggedIn()')
           a(ui-sref='login') Login
-        li.nav-link(ng-show='nav.isLoggedIn()', ui-sref-active='active')
+        li.nav-link(ng-show='nav.isLoggedIn()')
           a(ui-sref='settings') Store Settings
         li.nav-link(ng-show='nav.isLoggedIn()')
           a(ui-sref='logout') Logout

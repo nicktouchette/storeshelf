@@ -4,19 +4,19 @@ section.detail
   div.panel
     p Home > Category > Sub Category > #####-##
 
-    img(src="http://www.fillmurray.com/150/250")
+    img(src="{{vm.product.image}}")
 
     article
       table
         tr
           td Name
-          td Name Field
+          td {{vm.product.name}}
         tr
           td Category
-          td Category Field
+          td {{vm.product.category}}
         tr
           td Quantity
-          td Quantity Field
+          td {{vm.product.quantity}}
         tr
           td Custom 1
           td Custom 1 Field
@@ -24,9 +24,12 @@ section.detail
     article.footer
       ul
         li Price
-        li $999.99
-      button.warning Remove from Cart
-      button.checkout Checkout?
+        li {{vm.product.price}}
+      button.addCart Add to Cart
+      //- button.warning Remove from Cart
+      //- button.checkout Checkout?
 
     article
       p Description
+      br
+      p {{vm.product.description}}

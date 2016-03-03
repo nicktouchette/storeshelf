@@ -6,6 +6,7 @@ angular.module('storeshelfApp')
       .state('search', {
         url: '/search',
         templateUrl: 'app/search/search.html',
-        controller: 'SearchCtrl'
+        controller: 'SearchCtrl',
+        controllerAs: 'vm'
       });
   });

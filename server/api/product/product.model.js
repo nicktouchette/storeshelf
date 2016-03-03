@@ -21,6 +21,7 @@ var ProductSchema = new mongoose.Schema({
   price: Number,
   quantity: Number,
   sku: String,
+  image: String,
   description: String,
   attribute: [Attributes]
 });
