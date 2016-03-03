@@ -143,6 +143,72 @@ body {
   }
 }
 
+@mixin highlighting($background-color) {
+  &:hover {
+    background: darken($background-color, 25);
+  }
+
+  &:active {
+    background: lighten($background-color, 10);
+    color: black;
+  }
+}
+
+button {
+  font-family: BebasNeueBold;
+  $background-color: #3687D2;
+  @include highlighting($background-color);
+  color: white;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  background: $background-color;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  padding-top: 5px;
+
+  &.addCart {
+    text-align: center;
+  }
+
+  &.checkout {
+    $background-color: #AAD4A2;
+    @include highlighting($background-color);
+    background: $background-color;
+  }
+
+  &.warning ~ .checkout {
+    margin-left: -5px;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  &.warning {
+    $background-color: #D23636;
+    @include highlighting($background-color);
+    background: $background-color;
+  }
+
+  &.small {
+    width: 40px;
+  }
+
+  &.decrease, &.increase {
+    $background-color: #D8D8D8;
+    @include highlighting($background-color);
+    background: $background-color;
+    width: 30px;
+    height: 30px;
+    border-radius: 0px;
+    border: 2px solid #979797;
+    font-size: .25em;
+
+    span {
+      color: #979797;
+    }
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -152,6 +218,8 @@ body {
 
 // Component styles are injected through grunt
 // injector
+@import 'account/login/login';
+@import 'account/signup/signup';
 @import 'addproduct/addproduct';
 @import 'admin/admin';
 @import 'cart/cart';

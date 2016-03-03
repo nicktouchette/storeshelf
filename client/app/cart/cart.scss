@@ -1,0 +1,15 @@
+.cart .footer:last-child {
+  border: 2px solid black;
+  text-align: center;
+
+  h2 {
+    @include shift(-2.5);
+  }
+  p {
+    font-size: 3em;
+
+    span {
+      font-size: .25em;
+    }
+  }
+}

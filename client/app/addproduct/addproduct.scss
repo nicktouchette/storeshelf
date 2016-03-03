@@ -1,0 +1,12 @@
+.addproduct {
+  .products li{
+    margin-right: 10px !important;
+  }
+  .fields {
+    @include span-columns(1, table);
+    @include omega;
+  }
+  .description {
+    @include span-columns(12);
+  }
+}
