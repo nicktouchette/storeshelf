@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('storeshelfApp')
-  .controller('SettingsCtrl', function ($scope) {
+  .controller('StoresetupCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

@@ -1,1 +1,44 @@
-div This is the checkout view.
+section.checkout
+  header
+    h1 Checkout
+  div.panel
+    article.header
+      img(src='assets/images/step1.png')
+      h2 Shipping Address
+    article
+      p Email Address
+        input(type="text" placeholder="Enter Email")
+      p Recipient Name
+        input(type="text" placeholder="Recipient Name")
+      p Street Address
+        input(type="text" placeholder="Street Address")
+      p Zipcode
+        input(type="text" placeholder="Zipcode")
+      p City
+        input(type="text" placeholder="City")
+      p State
+        input(type="text" placeholder="State")
+  div.panel
+    article.header
+      img(src='assets/images/step2.png')
+      h2 Shipping
+    article
+  div.panel
+    article.header
+      img(src='assets/images/step3.png')
+      h2 Payment Information
+    article
+      p Card Number
+        input(type="text" placeholder="Enter Card Number")
+      p Expiration
+        input(type="text" placeholder="Expiration")
+      p CVC
+        input(type="text" placeholder="CVC")
+      img(src="http://www.fillmurray.com/300/150")
+  div.panel
+    article.header
+      img(src='assets/images/step4.png')
+      h2 Confirm Purchase
+    article
+      p A total of $???.?? will be charged to the card ending in 1234.
+      button.checkout Confirm

@@ -1,7 +1,7 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
-$visual-grid: true !default;
+// $visual-grid: true !default;
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 /**
@@ -152,8 +152,16 @@ body {
 
 // Component styles are injected through grunt
 // injector
+@import 'addproduct/addproduct';
 @import 'admin/admin';
+@import 'cart/cart';
+@import 'checkout/checkout';
+@import 'confirmation/confirmation';
+@import 'dashboard/dashboard';
+@import 'detail/detail';
 @import 'main/main';
+@import 'search/search';
+@import 'storesetup/storesetup';
 @import '../components/footer/footer';
 @import '../components/navbar/navbar';
 @import '../components/oauth-buttons/oauth-buttons';

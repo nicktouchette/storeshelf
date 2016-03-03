@@ -1,1 +1,65 @@
-div This is the addproduct view.
+section.addproduct
+  header
+    h1 Add Product
+  div.panel
+    ul.products
+      li
+        img(src="http://www.fillmurray.com/100/150")
+        h2 $999.99
+        p New Item
+          button.addCart Add to cart
+    article.fields
+      p Name
+        input(type="text" placeholder="Name")
+      p Category
+        input(type="text" placeholder="Category")
+      p Base Price
+        input(type="text" placeholder="Base Price")
+      p Image
+        input(type="text" placeholder="Image")
+      p SKU #
+        input(type="text" placeholder="SKU #")
+    article.description
+      p Description
+        input(type="text")
+  div.panel
+    article.header
+      h2 Custom Attributes
+    article
+      p Attribute Name
+        input(type="text" placeholder="Attribute Name")
+      table
+        tr
+          th -
+          th Value
+          th +Price
+          th Image
+          th SKU
+        tr
+          td
+            button.warning.small DEL
+          td
+            input(type="text" placeholder="Value")
+          td
+            input(type="text" placeholder="+Price")
+          td
+            input(type="text" placeholder="Image")
+          td
+            input(type="text" placeholder="SKU")
+      button Update
+
+      table
+        tr
+          th -
+          th Name
+          th Preview
+        tr
+          td
+            button.warning.small DEL
+          td
+            span Color
+          td
+            select(name="dropdown")
+              option(value="option1") Red
+              option(value="option2") Blue
+              option(value="option2") Green
