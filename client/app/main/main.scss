@@ -21,6 +21,7 @@ section {
   }
 
   .panel {
+    @include outer-container;
     background-color: $panel-color;
     margin-top: 0px;
     padding: 2px 10px;
@@ -37,7 +38,6 @@ section {
     }
 
     ul.products {
-      @include outer-container;
 
       li {
         $border: 1px solid #000000;
@@ -82,8 +82,6 @@ section {
       }
     }
     ul.dashboard {
-      @include outer-container;
-
       li {
         @include span-columns(3 of 12);
         @include omega(4n);
@@ -158,6 +156,53 @@ button {
 
   &.small {
     width: 40px;
+  }
+}
+
+.detail {
+  ul.fields {
+    @include span-columns(3 of 12);
+
+    .values {
+      @include span-columns(9 of 12);
+    }
+  }
+
+  .footer ul {
+    @include clearfix;
+
+    li {
+      font-family: BebasNeueBold;
+      font-size: 25px;
+    }
+    li:first-child {
+      float: left;
+    }
+    li:last-child {
+      float: right;
+    }
+  }
+
+  button {
+    width: 50%;
+  }
+
+  img {
+    @include span-columns(4 of 12);
+  }
+
+  article {
+    @include span-columns(8 of 12);
+    @include omega;
+
+    &.footer {
+      text-align: center;
+    }
+  }
+
+  article:last-child {
+    @include span-columns(12 of 12);
+    margin-top: 10px;
   }
 }
 

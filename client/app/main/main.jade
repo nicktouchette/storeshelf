@@ -7,23 +7,29 @@ section
 section
   header
     h1 Product Detail
-  div.panel
+  div.panel.detail
     p Home > Category > Sub Category > #####-##
 
-    .product-img
-      img(src="http://www.fillmurray.com/150/250")
+    img(src="http://www.fillmurray.com/150/250")
 
     article
-      p Name
-      p Category
-      p Quantity
-      p Custom 1
+      ul.fields
+        li Name
+        li Category
+        li Quantity
+        li Custom 1
+      ul.values
+        li Name Field
+        li Category Field
+        li Quantity Field
+        li Custom 1 Field
 
     article.footer
-      p Price
-      p $999.99
-      p Add to cart/Remove From Cart/Checkout?
-    br
+      ul
+        li Price
+        li $999.99
+      button Add to cart
+
     article
       p Description
 section
