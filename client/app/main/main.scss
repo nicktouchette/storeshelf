@@ -171,7 +171,7 @@ button {
     height: 30px;
     border-radius: 0px;
     border: 2px solid #979797;
-    font-family: IcoMoon-Free;
+    font-family: icomoon;
     font-size: 1em;
     color: #979797;
   }
@@ -206,6 +206,46 @@ button {
     float: right;
   }
 }
+.login {
+  text-align: center;
+  p {
+    padding-top: 10px;
+    line-height: .8em;
+    font-size: 2em;
+    text-align: left;
+  }
+  button {
+    margin: 10px;
+    width: 50%;
+    height: 2em;
+  }
+  a {
+    display: block;
+    text-decoration: underline;
+  }
+}
+
+.checkout article:last-child {
+  text-align: center;
+  p {
+    text-align: left;
+  }
+}
+
+.signup {
+  text-align: center;
+  p {
+    padding-top: 10px;
+    line-height: .8em;
+    font-size: 2em;
+    text-align: left;
+  }
+  button {
+    margin: 10px;
+    width: 50%;
+    height: 2em;
+  }
+}
 
 .detail {
   button {
@@ -229,6 +269,20 @@ button {
   article:last-child {
     @include span-columns(12 of 12);
     margin-top: 10px;
+  }
+}
+
+.addproduct {
+  .products li{
+    @include span-columns(4 of 12, table);
+    margin-right: 10px !important;
+  }
+  .fields {
+    @include span-columns(8 of 12);
+    @include omega;
+  }
+  .description {
+    @include span-columns(12);
   }
 }
 

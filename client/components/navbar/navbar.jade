@@ -5,16 +5,16 @@ header.navigation(role='banner' ng-controller='NavbarController')
     nav(role='navigation')
       //- House
       a.nav-icon(href="#")
-        span.icon 
+        span.icon-home3
       //- Hamburger
       a.nav-icon(href="#" ng-click="nav.isCollapsed = !nav.isCollapsed")
-        span.icon 
+        span.icon-menu3
       //- Shopping Cart
       a.nav-icon(href="#")
-        span.icon 
+        span.icon-cart
       //- Search
       a.nav-icon(href="#")
-        span.icon 
+        span.icon-search
       ul.navigation-menu(ng-show='!nav.isCollapsed')
         li.nav-link
           a(href='javascript:void(0)') Checkout

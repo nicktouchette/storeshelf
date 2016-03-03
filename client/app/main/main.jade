@@ -1,13 +1,13 @@
-section
+section.welcome
   header
     h1 Welcome
   div.panel
     article
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id enim metus. Maecenas viverra lectus vitae pharetra gravida. Morbi pretium purus in nibh congue sagittis. Suspendisse tempus maximus turpis accumsan scelerisque. Quisque tristique lacus quis mauris ullamcorper blandit. Maecenas efficitur at dui eu viverra. Etiam iaculis, dui condimentum euismod sagittis, diam augue auctor justo, vel auctor metus quam ac erat.
-section
+section.detail
   header
     h1 Product Detail
-  div.panel.detail
+  div.panel
     p Home > Category > Sub Category > #####-##
 
     img(src="http://www.fillmurray.com/150/250")
@@ -63,7 +63,7 @@ section.cart
       p $2009.98
         span + shipping
       button.checkout Checkout
-section
+section.login
   header
     h1 Login
   div.panel
@@ -73,8 +73,8 @@ section
       p Password
         input(type="password" placeholder="Enter Password")
       button Login
-      p Forgot Password?
-section
+      a(href='#') Forgot Password?
+section.signup
   header
     h1 Sign Up
   div.panel
@@ -86,7 +86,7 @@ section
       p Confirm Password
         input(type="password" placeholder="Confirm Password")
       button Register
-section
+section.checkout
   header
     h1 Checkout
   div.panel
@@ -129,6 +129,7 @@ section
       h2 Confirm Purchase
     article
       p A total of $???.?? will be charged to the card ending in 1234.
+      button.checkout Confirm
 section
   header
     h1 Confirmation
@@ -235,7 +236,7 @@ section
         h2 $999.99
         p Normal Item
           button.addCart Add to cart
-section
+section.addproduct
   header
     h1 Add Product
   div.panel
@@ -245,7 +246,7 @@ section
         h2 $999.99
         p New Item
           button.addCart Add to cart
-    article
+    article.fields
       p Name
         input(type="text" placeholder="Name")
       p Category
@@ -256,7 +257,7 @@ section
         input(type="text" placeholder="Image")
       p SKU #
         input(type="text" placeholder="SKU #")
-    article
+    article.description
       p Description
         input(type="text")
   div.panel
