@@ -4,6 +4,8 @@ import crypto from 'crypto';
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 import {Schema} from 'mongoose';
 
+var Products = require('../product/product.model');
+
 const authTypes = ['github', 'twitter', 'facebook', 'google'];
 
 var UserSchema = new Schema({
@@ -21,7 +23,19 @@ var UserSchema = new Schema({
   salt: String,
   facebook: {},
   google: {},
-  github: {}
+  github: {},
+
+  streetAddress: String,
+  zipcode: Number,
+  city: String,
+  state: String,
+
+  cart: [{
+    dateAdded: Date,
+    count: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product'
+  }]
 });
 
 /**
