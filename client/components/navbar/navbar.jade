@@ -8,7 +8,7 @@ header.navigation(role='banner' ng-controller='NavbarController')
         span.icon-home3
       //- Hamburger
       a.nav-icon(href="#" ng-click="nav.isCollapsed = !nav.isCollapsed")
-        span.icon-menu3
+        span(ng-class='{"icon-menu3": nav.isCollapsed, "icon-menu4": !nav.isCollapsed}')
       //- Shopping Cart
       a.nav-icon(href="#")
         span.icon-cart

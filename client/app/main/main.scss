@@ -282,11 +282,10 @@ button {
 
 .addproduct {
   .products li{
-    @include span-columns(4 of 12, table);
     margin-right: 10px !important;
   }
   .fields {
-    @include span-columns(8 of 12);
+    @include span-columns(1, table);
     @include omega;
   }
   .description {
