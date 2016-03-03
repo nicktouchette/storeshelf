@@ -171,9 +171,11 @@ button {
     height: 30px;
     border-radius: 0px;
     border: 2px solid #979797;
-    font-family: icomoon;
-    font-size: 1em;
-    color: #979797;
+    font-size: .25em;
+
+    span {
+      color: #979797;
+    }
   }
 }
 
@@ -325,7 +327,7 @@ input {
   height: 30px;
 
   button, input {
-    float: right;
+    float: left;
     margin: 0px;
     padding: 0px;
   }

@@ -108,6 +108,12 @@ $visual-grid: true !default;
 .icon-facebook2:before {
     content: "\e910";
 }
+.icon-minus:before {
+    content: "\e912";
+}
+.icon-plus:before {
+    content: "\e911";
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -136,13 +142,6 @@ body {
     margin: 0px;
   }
 }
-
-// span.icon {
-//   font-family: icomoon;
-//   font-size: 2.5em;
-//   color: white;
-//   text-decoration: none;
-// }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
