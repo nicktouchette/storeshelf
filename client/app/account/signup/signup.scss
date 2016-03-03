@@ -1,14 +1,19 @@
 .signup {
-  text-align: center;
-  p {
-    padding-top: 10px;
-    line-height: .8em;
-    font-size: 2em;
+  .form-group {
+    padding-bottom: 10px;
     text-align: left;
+  }
+  label {
+    font-size: 2em;
   }
   button {
     margin: 10px;
     width: 50%;
     height: 2em;
   }
+  a {
+    display: block;
+    text-decoration: underline;
+  }
+  text-align: center;
 }
