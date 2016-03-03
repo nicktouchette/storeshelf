@@ -105,7 +105,6 @@ section {
 
     article {
       background-color: $panel-color-medium;
-
       &.footer, &.header {
         padding: 5px;
         background-color: $panel-color-dark;
@@ -157,6 +156,32 @@ button {
   &.small {
     width: 40px;
   }
+
+  &.decrease, &.increase {
+    background: #D8D8D8;
+    width: 30px;
+    height: 30px;
+    border-radius: 0px;
+    border: 2px solid #979797;
+    font-family: IcoMoon-Free;
+    font-size: 1em;
+    color: #979797;
+  }
+}
+
+.footer ul {
+  @include clearfix;
+
+  li {
+    font-family: BebasNeueBold;
+    font-size: 25px;
+  }
+  li:first-child {
+    float: left;
+  }
+  li:last-child {
+    float: right;
+  }
 }
 
 .detail {
@@ -165,21 +190,6 @@ button {
 
     .values {
       @include span-columns(9 of 12);
-    }
-  }
-
-  .footer ul {
-    @include clearfix;
-
-    li {
-      font-family: BebasNeueBold;
-      font-size: 25px;
-    }
-    li:first-child {
-      float: left;
-    }
-    li:last-child {
-      float: right;
     }
   }
 
@@ -206,10 +216,56 @@ button {
   }
 }
 
+.product {
+  @include row;
+  position: relative;
+
+  img {
+    @include span-columns(3 of 12);
+  }
+
+  .info {
+    @include span-columns(5 of 12);
+  }
+
+  .price {
+    @include span-columns(4 of 12);
+    text-align: right;
+    font-size: 1.5em;
+
+    :last-child {
+      font-family: BebasNeueBold;
+      font-size: 1.5em;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-right: 10px;
+    }
+  }
+}
+
 input {
   background-color: white;
   border: 2px solid #979797;
   font-size: 20px;
+}
+
+.quantitybutton {
+  float: right;
+  height: 30px;
+
+  button, input {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+  }
+  input[type='number'] {
+    text-align: center;
+    margin: 0px 2px;
+    padding: 0px;
+    width: 40px;
+    height: 30px;
+  }
 }
 
 select {

@@ -36,15 +36,24 @@ section
   header
     h1 Cart
   div.panel
-    article
+    article.product
       img(src="http://www.fillmurray.com/100/100")
-      p Item Name
-      p SKU
-      p Price
-      p $999.99
+      ul.info
+        li Item Name
+        li SKU: #####-##
+      ul.price
+        li Price
+        li $999.99
     article.footer
-      p Remove
-      p Qty
+      ul
+        li
+          button.warning Remove
+        li qty
+          .quantitybutton
+            button.decrease -
+            input(type='number' value="1")
+            button.increase +
+
     br
     article.footer
       p Total Price
