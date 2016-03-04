@@ -1,6 +1,23 @@
 # storeshelf
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
+A multi-purpose store interface.
+[Heroku](http://storeshelf.herokuapp.com)
+
+## Technologies
+- Angular
+- MongoDB
+- Express
+- Node.js
+
+## TODO
+- Customizable Settings
+- Add more customizable product creation options
+- Implement updated inventory system
+- Update SKU generation
+- Add order processing for store owners
+- Media Queries for desktop resolutions
+- Connect with Stripe
+- Connect with SendGrid
 
 ## Getting Started
 

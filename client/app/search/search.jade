@@ -16,27 +16,5 @@ section
       li(ng-repeat="product in vm.products")
         a(ui-sref="detail({id: product._id})")
           img(src="{{product.image}}")
-          h2 {{product.price}}
+          h2 {{product.price | currency}}
           p {{product.name}}
-        //- p.last
-        //-   button.addCart(ng-click="vm.addCart()") Add to cart
-      //- li
-      //-   img(src="http://www.fillmurray.com/100/150")
-      //-   h2 $999.99
-      //-   p Normal Item
-      //-     button.addCart Add to cart
-      //- li
-      //-   img(src="http://www.fillmurray.com/100/150")
-      //-   h2 $999.99
-      //-   p Normal Item
-      //-     button.addCart Add to cart
-      //- li
-      //-   img(src="http://www.fillmurray.com/100/150")
-      //-   h2 $999.99
-      //-   p Normal Item
-      //-     button.addCart Add to cart
-      //- li
-      //-   img(src="http://www.fillmurray.com/100/150")
-      //-   h2 $999.99
-      //-   p Normal Item
-      //-     button.addCart Add to cart

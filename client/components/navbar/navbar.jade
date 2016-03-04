@@ -22,7 +22,7 @@ header.navigation(role='banner' ng-controller='NavbarController')
           a(ui-sref='cart') Shopping Cart
         li.nav-link
           a(ui-sref='search') Find Products
-        li.nav-link
+        li.nav-link(ng-hide='nav.isLoggedIn()')
           a(ui-sref='dashboard') Account Settings
         li.nav-link(ng-show='nav.isAdmin()')
           a(ui-sref='admin') Admin Dashboard
