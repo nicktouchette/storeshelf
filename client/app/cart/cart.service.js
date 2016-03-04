@@ -41,6 +41,21 @@ class CartService {
         sessionStorage.setItem('storeshelfcart', JSON.stringify(ss));
       }
     };
+
+    vm.updateItem = function(index) {
+      var ss = sessionStorage.getItem('storeshelfcart');
+      if (ss) {
+        ss = JSON.parse(ss);
+        ss[index] = vm.cart[index];
+        sessionStorage.setItem('storeshelfcart', JSON.stringify(ss));
+      }
+    };
+
+    vm.updateSum = function() {
+      return vm.cart.reduce(function(total, item) {
+        return total + ((item.product.price + item.attributes[0].price) * item.count);
+      }, 0);
+    };
       // if (item.qty > 0) {
 
       //   var found = findItemById(vm.cart, item.id);

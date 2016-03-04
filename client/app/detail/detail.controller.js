@@ -10,11 +10,15 @@ class DetailCtrl {
 
     vm.price = 0;
     vm.product = {};
-    vm.cart = {
-      count: 1,
-      attributes: [],
-      product: {}
-    };
+
+    function emptyCart() {
+      return {
+        count: 1,
+        attributes: [],
+        product: {}
+      };
+    }
+    vm.cart = emptyCart();
 
     vm.decrease = function() {
       if (vm.cart.count > 1) {
@@ -31,6 +35,7 @@ class DetailCtrl {
         vm.cart.product = vm.product;
         vm.cart.attributes.push(vm.selected);
         CartService.addItem(vm.cart);
+        vm.cart = emptyCart();
       }
     };
 
