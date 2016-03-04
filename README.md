@@ -1,23 +1,46 @@
 # storeshelf
-
-A multi-purpose store interface.
 [Heroku](http://storeshelf.herokuapp.com)
 
-## Technologies
+A multi-purpose store interface.
+
+### Technologies
 - Angular
 - MongoDB
 - Express
 - Node.js
+- Bourbon/Neat
 
-## TODO
+### TODO
 - Customizable Settings
 - Add more customizable product creation options
 - Implement updated inventory system
+- Product/User Statistics using D3
 - Update SKU generation
 - Add order processing for store owners
 - Media Queries for desktop resolutions
 - Connect with Stripe
 - Connect with SendGrid
+
+### Concept
+- Multi-purpose
+- Highly customizable/reusability
+- Easy to use
+- No login barrier
+
+### Challenges
+Issues with the Yeoman Angular Fullstack generator were at large.  When using 
+Jade and Gulp together the package will allow the user to run the server locally 
+but when the user tries to run off of dist, the entire thing blows up.  No good 
+when trying to push to heroku.
+
+Another issue was that when editing a jade file, the auto rebuild feature of the 
+package did not execute which meant restarting the server every time I wanted 
+to change a view.
+
+Issues came out of the box, seeing as the jade implementation for the generator seemed hacked in.
+
+Solution was to debug the gulpfile and add jade file processing when executing 
+the gulp build.
 
 ## Getting Started
 
