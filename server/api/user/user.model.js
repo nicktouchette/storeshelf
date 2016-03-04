@@ -33,6 +33,7 @@ var UserSchema = new Schema({
   cart: [{
     dateAdded: Date,
     count: Number,
+    attributes: [],
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product'
   }]

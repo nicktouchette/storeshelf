@@ -154,7 +154,7 @@ body {
   }
 }
 
-button {
+button, input[type='submit'] {
   font-family: BebasNeueBold;
   $background-color: #3687D2;
   @include highlighting($background-color);
@@ -217,6 +217,11 @@ button {
     padding: 0px;
   }
   input[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
     text-align: center;
     margin: 0px 2px;
     padding: 0px;
