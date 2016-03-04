@@ -2,25 +2,27 @@ section.cart
   header
     h1 Cart
   div.panel
-    article.product
-      img(src="http://www.fillmurray.com/100/100")
-      ul.info
-        li Item Name
-        li SKU: #####-##
-      ul.price
-        li Price
-        li $999.99
-    article.footer
-      ul
-        li
-          button.warning Remove
-        li qty
-          .quantitybutton
-            button.decrease
-              span.icon-minus
-            input(type='number' value="1")
-            button.increase
-              span.icon-plus
+    .item(ng-repeat="item in vm.cart track by $index")
+      article.product
+        img(src="{{item.product.image}}")
+        ul.info
+          li {{item.product.name}}
+          li SKU: {{item.product.sku}}
+        ul.price
+          li Price
+          li {{item.product.price}}
+      article.footer
+        ul
+          li
+            form(ng-submit="vm.removeFromCart($index)")
+              input.warning(type="submit" value="Remove")
+          li qty
+            .quantitybutton
+              button.decrease
+                span.icon-minus
+              input(type='number' value="1")
+              button.increase
+                span.icon-plus
     br
     article.footer
       h2 Total Price

@@ -4,7 +4,7 @@
 
 class DetailCtrl {
 
-  constructor($http, $stateParams) {
+  constructor($http, $stateParams, CartService) {
     var vm = this;
     var id = $stateParams.id;
 
@@ -13,7 +13,7 @@ class DetailCtrl {
     vm.cart = {
       count: 1,
       attributes: [],
-      ref: id
+      product: {}
     };
 
     vm.decrease = function() {
@@ -28,15 +28,15 @@ class DetailCtrl {
 
     vm.addCart = function(){
       if (vm.selected) {
-        vm.cart.attributes.push(vm.selected._id);
+        vm.cart.product = vm.product;
+        vm.cart.attributes.push(vm.selected);
+        CartService.addItem(vm.cart);
       }
-      console.log(vm.cart);
     };
 
     $http.get('/api/products/' + id).then(response => {
       vm.product = response.data;
       vm.price = vm.product.price;
-      console.log(vm.product);
     });
   }
 }

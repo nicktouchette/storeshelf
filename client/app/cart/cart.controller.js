@@ -4,17 +4,15 @@
 
 class CartCtrl {
 
-  constructor($http, $stateParams) {
+  constructor($http, CartService) {
     var vm = this;
-    var id = $stateParams.id;
 
-    vm.price = 0;
-    vm.product = {};
-    vm.cart = {
-      count: 1,
-      attributes: [],
-      ref: id
+    vm.cart = CartService.cart;
+
+    vm.removeFromCart = function(index) {
+      CartService.removeItem(index);
     };
+
   }
 }
 
