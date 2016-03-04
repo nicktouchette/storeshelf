@@ -17,7 +17,7 @@ header.navigation(role='banner' ng-controller='NavbarController')
         span.icon-search
       ul.navigation-menu(ng-show='!nav.isCollapsed' ng-click="nav.isCollapsed = true")
         li.nav-link
-          a(ui-sref='checkout') Checkout
+          a(ui-sref='checkout' ng-show='nav.activeCart()') Checkout
         li.nav-link
           a(ui-sref='cart') Shopping Cart
         li.nav-link

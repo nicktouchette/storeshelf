@@ -11,6 +11,8 @@ class DetailCtrl {
     vm.price = 0;
     vm.product = {};
 
+    vm.isInCart = CartService.isInCart;
+
     function emptyCart() {
       return {
         count: 1,

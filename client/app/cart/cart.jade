@@ -25,7 +25,8 @@ section.cart
               button.increase(ng-click="vm.increase($index)")
                 span.icon-plus
     br
-    article.footer
+    p(ng-hide="vm.activeCart()") No Items in your Cart
+    article.footer(ng-show="vm.activeCart()")
       h2 Total Price
       p {{vm.total | currency}}
         span + shipping

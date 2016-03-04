@@ -19,6 +19,23 @@ class CartService {
     //     return item.id === id;
     //   });
     // }
+    vm.hasItem = function() {
+      return vm.cart.length > 0;
+    };
+
+    vm.isInCart = function(item) {
+      if (item) {
+        var is;
+        vm.cart.forEach(function(a) {
+          if (a.product._id === item._id) {
+            is = true;
+            return;
+          }
+          is = false;
+        });
+        return is;
+      }
+    };
 
     vm.addItem = function(item) {
       vm.cart.push(item);

@@ -135,6 +135,13 @@ body {
 
   a {
     text-decoration: none;
+
+    &:visited {
+      color: black;
+    }
+    &:hover {
+      color: #444;
+    }
   }
 
   p {

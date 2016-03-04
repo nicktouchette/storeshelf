@@ -9,6 +9,7 @@ class CartCtrl {
 
     vm.cart = CartService.cart;
     vm.total = CartService.updateSum();
+    vm.activeCart = CartService.hasItem;
 
     vm.removeFromCart = function(index) {
       CartService.removeItem(index);

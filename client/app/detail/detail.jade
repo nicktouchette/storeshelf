@@ -32,12 +32,11 @@ section.detail
       ul
         li Price
         li {{(vm.price + vm.selected.price) * vm.cart.count | currency}}
-      form(ng-submit="vm.addCart()")
+      form(ng-submit="vm.addCart()" ng-show="!vm.isInCart(vm.product)")
         input.addCart(type="submit" value="Add To Cart")
-      //- input.addCart(ng-click="vm.addCart(vm.product.id, vm.qty, dropdown)") Add to Cart
-      //- input.warning Remove from Cart
-      //- input.checkout Checkout?
-
+      form(ng-submit="vm.removeFromCart()" ng-show="vm.isInCart(vm.product)")
+        input.warning(type="submit" value="Remove from Cart")
+        input.checkout(type="submit" value="Checkout?")
     article
       p Description
       br
